@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DePIN ROI Calculator — honest payback math, per hardware variant</title>
+<style>
+  :root{
+    --bg:#0e1218; --card:#171e2a; --card2:#1f2839; --line:#2a3550;
+    --text:#e8edf5; --muted:#9aa6bd; --accent:#2fd08c; --accent2:#4aa8ff;
+    --warn:#ffb02e; --bad:#ff6b6b;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
+  .wrap{max-width:1080px;margin:0 auto;padding:20px 16px 80px}
+  header{margin:8px 0 20px}
+  h1{margin:0 0 6px;font-size:28px}
+  h1 .accent{color:var(--accent)}
+  .sub{color:var(--muted);margin:0;max-width:720px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+  .chip{border:1px solid var(--line);background:var(--card);color:var(--text);
+    padding:7px 14px;border-radius:999px;cursor:pointer;font-size:14px}
+  .chip.active{background:var(--accent);border-color:var(--accent);color:#06251a;font-weight:700}
+  .grid{display:grid;gap:12px}
+  .products{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:14px;cursor:pointer;transition:border-color .15s}
+  .card:hover{border-color:var(--accent2)}
+  .card.sel{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+  .card h3{margin:0 0 4px;font-size:16px}
+  .meta{color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .badge{font-size:11px;padding:2px 8px;border-radius:999px;font-weight:700;text-transform:uppercase;letter-spacing:.4px}
+  .b-solid{background:#123b2a;color:#5fe3a1}
+  .b-shaky{background:#3d2f0e;color:#ffcf6b}
+  .b-sparse{background:#3d1414;color:#ff9a9a}
+  .tok{background:var(--card2);padding:2px 8px;border-radius:6px;font-family:ui-monospace,monospace}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin-top:18px}
+  .variants{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin:12px 0}
+  .var{border:1px solid var(--line);border-radius:10px;padding:12px;background:var(--card2);cursor:pointer;position:relative}
+  .var:hover:not(.disabled){border-color:var(--accent2)}
+  .var.sel{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+  .var.disabled{opacity:.55;cursor:not-allowed}
+  .var .vname{font-weight:700;font-size:14px;margin-bottom:6px}
+  .var .vprice{font-size:20px;font-weight:800;color:var(--accent)}
+  .var .vprice.unavail{color:var(--warn);font-size:15px}
+  .var .vpower{color:var(--muted);font-size:13px}
+  .alert{border-radius:10px;padding:12px 14px;margin:12px 0;font-size:14px}
+  .alert.warn{background:#2b2008;border:1px solid #6b4d16;color:#ffd98a}
+  .alert.info{background:#0e2a45;border:1px solid #1f5b9e;color:#aed6ff}
+  .inputs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:16px 0}
+  label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+  input[type=number],input[type=text]{width:100%;background:#0c111a;border:1px solid var(--line);
+    color:var(--text);border-radius:8px;padding:10px 12px;font-size:16px}
+  input:focus{outline:none;border-color:var(--accent2)}
+  .hint{font-size:12px;color:var(--muted);margin-top:4px}
+  .results{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:16px}
+  .stat{background:#0c111a;border:1px solid var(--line);border-radius:10px;padding:12px}
+  .stat .k{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+  .stat .v{font-size:22px;font-weight:800;margin-top:4px}
+  .stat .v.good{color:var(--accent)} .stat .v.warn{color:var(--warn)} .stat .v.bad{color:var(--bad)}
+  .stat .v.na{color:var(--muted);font-size:16px}
+  table{width:100%;border-collapse:collapse;margin-top:10px;font-size:14px}
+  th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line)}
+  th{color:var(--muted);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+  tr.best td{color:var(--accent);font-weight:700}
+  tr.excl td{color:var(--muted)}
+  .btn{background:var(--accent2);color:#06121f;border:0;border-radius:8px;padding:8px 14px;
+    font-weight:700;cursor:pointer;font-size:14px;margin-left:8px}
+  .btn.ghost{background:transparent;border:1px solid var(--line);color:var(--text)}
+  details{margin-top:14px} summary{cursor:pointer;color:var(--accent2)}
+  footer{margin-top:40px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:18px}
+  .buybtn{display:inline-block;background:var(--accent);color:#06251a;font-weight:800;
+    padding:10px 20px;border-radius:10px;text-decoration:none;margin-top:10px}
+  .hidden{display:none}
+  @media(max-width:600px){h1{font-size:22px}.stat .v{font-size:19px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>DePIN ROI <span class="accent">Calculator</span></h1>
+  <p class="sub">Honest payback math for DePIN hardware. Pick the <strong>exact hardware variant</strong> — a $150 miner and a $2,500 miner on the same network are not the same investment.</p>
+</header>
+
+<section>
+  <label>Network</label>
+  <div class="chips" id="networks"></div>
+</section>
+
+<section>
+  <label>Hardware</label>
+  <div class="grid products" id="products"></div>
+</section>
+
+<section id="detail" class="hidden"></section>
+
+<footer>
+  <p><strong>Disclaimer:</strong> All figures are estimates for illustration only — not financial advice.
+  Token prices are volatile, network rewards change (halvings, multipliers, coverage rules), and hardware prices rot.
+  Hardware data last verified October 2026; re-verify any price before buying.</p>
+  <p>Built as an independent tool. Not affiliated with Moken, Helium, or any network or vendor listed.</p>
+</footer>
+</div>
+
+<script>
+"use strict";
+/*__DATA__*/
+
+const COINGECKO_IDS = { HNT:'helium', IOT:'helium-iot', HONEY:'hivemapper', WXM:'weatherxm', DIMO:'dimo', GEOD:'geodnet', ONO:'onocoy' };
+// Tokens without a verified CoinGecko id fall back to manual price entry.
+const BLOCKED_PRODUCTS = {
+  'wingbits-diy-byod': { title:'Not a purchasable option', variantIdx:0 },
+  'sensecap-m2':      { title:'Not compatible', variantIdx:0 }
+};
+
+const state = { network:'All', productId:null, variantIdx:0, elecRate:0.16,
+  dailyTokens:'', priceMode:'live', tokenPrice:'', priceTs:null, cgId:null };
+
+const $ = id => document.getElementById(id);
+const fmt$ = n => n==null||!isFinite(n) ? '—' : '$'+Number(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+const fmtN = (n,d=2) => n==null||!isFinite(n) ? '—' : Number(n).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
+
+function networks(){ const s=new Set(DATA.products.map(p=>p.network)); return ['All',...[...s].sort()]; }
+
+function renderNetworks(){
+  $('networks').innerHTML = networks().map(n=>
+    `<button class="chip${n===state.network?' active':''}" data-n="${n}">${n}</button>`).join('');
+  document.querySelectorAll('#networks .chip').forEach(c=>c.onclick=()=>{
+    state.network=c.dataset.n; state.productId=null; renderNetworks(); renderProducts(); $('detail').classList.add('hidden');
+  });
+}
+
+function renderProducts(){
+  const list = DATA.products.filter(p=>state.network==='All'||p.network===state.network);
+  $('products').innerHTML = list.map(p=>{
+    const n=p.variants.length, blocked=p.id in BLOCKED_PRODUCTS;
+    return `<div class="card" data-id="${p.id}">
+      <h3>${p.name}</h3>
+      <div class="meta"><span>${p.network}</span><span class="tok">${p.token_symbol||'—'}</span>
+      <span class="badge b-${p.data_quality}">${p.data_quality}</span>
+      ${n?`<span>${n} variant${n>1?'s':''}</span>`:`<span>app-only · $0 hardware</span>`}
+      ${blocked?`<span class="badge b-sparse">warning</span>`:''}</div></div>`;
+  }).join('');
+  document.querySelectorAll('#products .card').forEach(c=>c.onclick=()=>selectProduct(c.dataset.id));
+}
+
+function selectProduct(id){
+  state.productId=id; state.variantIdx=0; state.priceTs=null; state.tokenPrice=''; state.priceMode='live';
+  const p=product();
+  state.cgId = p.token_symbol && COINGECKO_IDS[p.token_symbol] ? COINGECKO_IDS[p.token_symbol] : null;
+  const tdt=p.typical_daily_tokens;
+  state.dailyTokens = tdt ? String(Math.round(((tdt.low+tdt.high)/2)*100)/100) : '';
+  document.querySelectorAll('#products .card').forEach(c=>c.classList.toggle('sel',c.dataset.id===id));
+  renderDetail();
+  fetchPrice();
+}
+function product(){ return DATA.products.find(p=>p.id===state.productId); }
+
+async function fetchPrice(){
+  if(!state.cgId) return; // manual-only token
+  const pid=state.productId; // stale-response guard
+  try{
+    const r=await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${state.cgId}&vs_currencies=usd`);
+    if(!r.ok) throw new Error('http '+r.status);
+    const j=await r.json();
+    if(pid!==state.productId) return;
+    const px=j[state.cgId]&&j[state.cgId].usd;
+    if(typeof px==='number'&&px>0){
+      state.tokenPrice=px; state.priceMode='live'; state.priceTs=new Date();
+    } else throw new Error('no price in response');
+  }catch(e){
+    if(pid!==state.productId) return;
+    state.priceMode='manual';
+  }
+  renderDetailInputs(); updateOutputs();
+}
+
+function selectedVariant(){ const p=product(); return p.variants[state.variantIdx]; }
+function isBlocked(){ return state.productId in BLOCKED_PRODUCTS; }
+function variantPurchasable(v){ return v && v.price_usd!=null; }
+
+function elecPerMonth(watts,rate){
+  if(watts==null) return null;
+  return (watts/1000)*24*30*rate;
+}
+
+// Pure math — testable without DOM.
+function computeROI(opts){
+  const {price, watts, elecRate, dailyTokens, tokenPrice} = opts;
+  const out={};
+  out.elecMonthly = elecPerMonth(watts, elecRate);
+  if(dailyTokens==null||dailyTokens===''||tokenPrice==null||tokenPrice===''){
+    out.revenueDaily=null; out.revenueMonthly=null; out.netDaily=null; out.netMonthly=null; out.paybackMonths=null; return out;
+  }
+  out.revenueDaily = dailyTokens*tokenPrice;
+  out.revenueMonthly = out.revenueDaily*30;
+  const elec = out.elecMonthly==null?0:out.elecMonthly;
+  out.netDaily = out.revenueDaily - elec/30;
+  out.netMonthly = out.revenueMonthly - elec;
+  if(price==null){ out.paybackMonths=null; }
+  else if(out.netMonthly<=0){ out.paybackMonths=Infinity; }
+  else out.paybackMonths = price/out.netMonthly;
+  return out;
+}
+
+function paybackLabel(m){
+  if(m==null) return {t:'—',cls:'na'};
+  if(m===Infinity) return {t:'Never',cls:'bad'};
+  if(m<1) return {t:'< 1 month',cls:'good'};
+  return {t:fmtN(m,1)+' months',cls:m<=12?'good':(m<=36?'warn':'bad')};
+}
+function breakEvenLabel(m){
+  if(m==null||m===Infinity) return '—';
+  const d=new Date(Date.now()+m*30*24*3600*1000);
+  return d.toLocaleDateString('en-US',{month:'long',year:'numeric'});
+}
+
+function renderDetail(){
+  const p=product(); if(!p) return;
+  const blocked=isBlocked();
+  const tdt=p.typical_daily_tokens;
+  const warnBox = p.id==='wingbits-diy-byod'
+    ? `<div class="alert warn"><strong>⚠ BYOD is closed.</strong> ${esc(p.variants[0].notes)}</div>`
+    : p.id==='sensecap-m2'
+    ? `<div class="alert warn"><strong>⚠ Not Helium-compatible.</strong> ${esc(p.variants[0].notes)}</div>`
+    : p.id==='nebra-indoor-hotspot'
+    ? `<div class="alert warn"><strong>⚠ Effectively defunct.</strong> ${esc(p.variants[0].notes)}</div>`
+    : '';
+  const appOnly = p.variants.length===0
+    ? `<div class="alert info"><strong>$0 hardware needed.</strong> ${esc(p.variant_note||'No dedicated hardware exists — app/software only.')}</div>` : '';
+
+  $('detail').innerHTML = `
+  <div class="panel">
+    <h2 style="margin:0 0 4px">${p.name}</h2>
+    <div class="meta" style="margin-bottom:6px"><span>${p.network}</span><span class="tok">${p.token_symbol||'—'}</span>
+      <span class="badge b-${p.data_quality}">data: ${p.data_quality}</span>
+      <span class="hint">verified ${p.last_verified||'n/a'}</span></div>
+    ${warnBox}${appOnly}
+    ${p.variants.length?`<label style="margin-top:10px">Exact variant — pick yours</label>
+    <div class="variants" id="variants"></div>`:'<div id="variants"></div>'}
+    <div id="inputs"></div>
+    <div id="outputs"></div>
+    <div id="compare"></div>
+    <details><summary>Sources & data notes</summary>
+      <p class="hint">Earnings model: ${esc(p.earnings_model||'—')}</p>
+      <ul class="hint">${(p.sources||[]).map(s=>`<li><a href="${s}" target="_blank" rel="noopener" style="color:var(--accent2)">${s}</a></li>`).join('')}</ul>
+      ${p.affiliate_note?`<p class="hint">${esc(p.affiliate_note)}</p>`:''}
+    </details>
+    ${p.affiliate_url?`<a class="buybtn" href="${p.affiliate_url}" target="_blank" rel="noopener sponsored">Buy ${esc(p.name)} →</a>`:''}
+  </div>`;
+  $('detail').classList.remove('hidden');
+  renderVariants(); renderDetailInputs(); updateOutputs();
+}
+
+function renderVariants(){
+  const p=product(); const el=$('variants'); if(!el) return;
+  const blocked=isBlocked();
+  el.innerHTML=p.variants.map((v,i)=>{
+    const dis = blocked || v.price_usd==null;
+    const reason = blocked ? 'not selectable' : (v.price_usd==null?'price unverifiable':'');
+    return `<div class="var${i===state.variantIdx&&!dis?' sel':''}${dis?' disabled':''}" data-i="${i}" title="${dis?reason:''}">
+      <div class="vname">${v.variant_name}</div>
+      ${v.price_usd!=null?`<div class="vprice">$${Number(v.price_usd).toLocaleString('en-US')}</div>`
+        :`<div class="vprice unavail">Price unavailable</div><div class="hint">No verifiable listing — ROI disabled for this variant.</div>`}
+      <div class="vpower">${v.power_watts!=null?v.power_watts+' W typical':'power: n/a (electricity cost negligible / unknown)'}</div>
+      ${v.notes?`<div class="hint">${esc(v.notes.length>220?v.notes.slice(0,220)+'…':v.notes)}</div>`:''}
+    </div>`;
+  }).join('');
+  el.querySelectorAll('.var:not(.disabled)').forEach(c=>c.onclick=()=>{
+    state.variantIdx=parseInt(c.dataset.i,10); renderVariants(); updateOutputs();
+  });
+}
+
+function renderDetailInputs(){
+  const p=product(); const el=$('inputs'); if(!el||!p) return;
+  const tdt=p.typical_daily_tokens;
+  const liveRow = state.cgId
+    ? `<div><label>${p.token_symbol} price (USD) — live via CoinGecko</label>
+        <div style="display:flex"><input type="number" id="in-price" step="any" min="0" value="${state.tokenPrice===''?'':state.tokenPrice}">
+        <button class="btn ghost" id="btn-refresh" title="Refresh live price">⟳</button></div>
+        <div class="hint" id="price-hint">${priceHint()}</div></div>`
+    : `<div><label>${p.token_symbol} price (USD) — manual entry</label>
+        <input type="number" id="in-price" step="any" min="0" value="${state.tokenPrice===''?'':state.tokenPrice}">
+        <div class="hint">No live price feed configured for ${p.token_symbol} yet — enter the current price manually.</div></div>`;
+  el.innerHTML=`<div class="inputs">
+    <div><label>Electricity rate ($/kWh)</label>
+      <input type="number" id="in-elec" step="0.01" min="0" value="${state.elecRate}">
+      <div class="hint">US average ≈ $0.16. Adjust to your bill.</div></div>
+    <div><label>Est. daily earnings (${p.token_symbol}/day)</label>
+      <input type="number" id="in-tokens" step="any" min="0" placeholder="Enter your estimate" value="${state.dailyTokens}">
+      <div class="hint">${tdt?`Starting point ${tdt.low}–${tdt.high}/day (${esc(tdt.basis).slice(0,140)}…). Always editable — treat as an estimate, not truth.`:'Networks publish no per-device figures — enter your own estimate.'}</div></div>
+    ${liveRow}
+  </div>`;
+  $('in-elec').oninput=e=>{state.elecRate=parseFloat(e.target.value)||0; updateOutputs();};
+  $('in-tokens').oninput=e=>{state.dailyTokens=e.target.value===''? '':parseFloat(e.target.value); updateOutputs();};
+  $('in-price').oninput=e=>{state.tokenPrice=e.target.value===''? '':parseFloat(e.target.value); state.priceMode='manual'; state.priceTs=null;
+    const h=$('price-hint'); if(h) h.textContent=priceHint(); updateOutputs();};
+  const rb=$('btn-refresh'); if(rb) rb.onclick=()=>{state.priceMode='live'; fetchPrice();};
+}
+function priceHint(){
+  if(state.priceMode==='manual'&&state.tokenPrice!=='') return 'Manual override — press ⟳ to fetch the live price again.';
+  if(state.priceMode==='manual') return 'Live feed unavailable right now — enter the price manually.';
+  if(state.priceTs) return 'Live · updated '+state.priceTs.toLocaleString()+' · editable (editing switches to manual)';
+  return 'Fetching live price…';
+}
+
+function updateOutputs(){
+  const p=product(); if(!p||!$('outputs')) return;
+  const blocked=isBlocked();
+  const v=selectedVariant();
+  const dt=state.dailyTokens==='' ? null : state.dailyTokens;
+  const tp=state.tokenPrice==='' ? null : state.tokenPrice;
+
+  if(p.variants.length===0){
+    $('outputs').innerHTML=`<div class="alert info">No hardware cost — nothing to compute payback on. Your only "investment" is the phone you already own.</div>`;
+    $('compare').innerHTML=''; return;
+  }
+  if(blocked){
+    $('outputs').innerHTML=`<div class="alert warn">No ROI to compute — this is not a viable purchase.</div>`;
+    $('compare').innerHTML=''; return;
+  }
+  if(!variantPurchasable(v)){
+    $('outputs').innerHTML=`<div class="alert warn">ROI disabled: this variant has no verifiable price. We don't guess prices — pick a variant with a listed price, or enter data you trust.</div>`;
+    renderCompare(p,dt,tp); return;
+  }
+
+  const r=computeROI({price:v.price_usd,watts:v.power_watts,elecRate:state.elecRate,dailyTokens:dt,tokenPrice:tp});
+  const pb=paybackLabel(r.paybackMonths);
+  const missing = dt==null||tp==null;
+  $('outputs').innerHTML=`
+    <div class="results">
+      <div class="stat"><div class="k">Hardware cost</div><div class="v">${fmt$(v.price_usd)}</div></div>
+      <div class="stat"><div class="k">Power draw</div><div class="v${v.power_watts==null?' na':''}">${v.power_watts!=null?v.power_watts+' W':'n/a'}</div></div>
+      <div class="stat"><div class="k">Electricity / month</div><div class="v${r.elecMonthly==null?' na':''}">${r.elecMonthly==null?'n/a':fmt$(r.elecMonthly)}</div></div>
+      <div class="stat"><div class="k">Est. revenue / day</div><div class="v${missing?' na':''}">${fmt$(r.revenueDaily)}</div></div>
+      <div class="stat"><div class="k">Est. revenue / month</div><div class="v${missing?' na':''}">${fmt$(r.revenueMonthly)}</div></div>
+      <div class="stat"><div class="k">Net / month</div><div class="v ${r.netMonthly==null?'na':(r.netMonthly>0?'good':'bad')}">${r.netMonthly==null?'—':fmt$(r.netMonthly)}</div></div>
+      <div class="stat"><div class="k">Payback period</div><div class="v ${pb.cls}">${pb.t}</div></div>
+      <div class="stat"><div class="k">Break-even</div><div class="v ${pb.cls}">${breakEvenLabel(r.paybackMonths)}</div></div>
+    </div>
+    ${missing?'<div class="alert info">Enter an earnings estimate and a token price to see payback math.</div>':''}`;
+  renderCompare(p,dt,tp);
+}
+
+function renderCompare(p,dt,tp){
+  const el=$('compare'); if(!el) return;
+  const rows=p.variants.map((v,i)=>{
+    if(v.price_usd==null) return {v,excl:'Price unavailable'};
+    const r=computeROI({price:v.price_usd,watts:v.power_watts,elecRate:state.elecRate,dailyTokens:dt,tokenPrice:tp});
+    return {v,r,i};
+  });
+  const ok=rows.filter(x=>!x.excl&&x.r.paybackMonths!=null);
+  const best=ok.length?ok.reduce((a,b)=>a.r.paybackMonths<b.r.paybackMonths?a:b):null;
+  el.innerHTML=`<h3 style="margin:18px 0 4px">Compare variants — same assumptions, honest numbers</h3>
+  <p class="hint">This is the whole point: pick the wrong variant and the payback math lies.</p>
+  <div style="overflow-x:auto"><table>
+    <tr><th>Variant</th><th>Price</th><th>Power</th><th>Elec/mo</th><th>Net/mo</th><th>Payback</th></tr>
+    ${rows.map(x=>{
+      if(x.excl) return `<tr class="excl"><td>${x.v.variant_name}</td><td colspan="5">Price unavailable — excluded</td></tr>`;
+      const pb=paybackLabel(x.r.paybackMonths);
+      const isBest=best&&x===best, isSel=p.variants[state.variantIdx]===x.v;
+      return `<tr class="${isBest?'best':''}"><td>${x.v.variant_name}${isBest?' ★':''}${isSel?' (selected)':''}</td><td>${fmt$(x.v.price_usd)}</td>
+        <td>${x.v.power_watts!=null?x.v.power_watts+' W':'n/a'}</td><td>${fmt$(x.r.elecMonthly)}</td>
+        <td>${x.r.netMonthly==null?'—':fmt$(x.r.netMonthly)}</td><td>${pb.t}</td></tr>`;
+    }).join('')}
+  </table></div>`;
+}
+
+function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+// expose pure functions for node-based tests
+if(typeof module!=='undefined'&&module.exports){ module.exports={computeROI,paybackLabel,elecPerMonth,selectProduct,product,state,DATA,renderProducts,renderNetworks,updateOutputs,renderDetailInputs}; }
+
+renderNetworks(); renderProducts();
+</script>
+</body>
+</html>
