@@ -578,15 +578,15 @@
       "variants": [
         {
           "variant_name": "TarantulaX (TX)",
-          "price_usd": 150,
+          "price_usd": 199,
           "power_watts": null,
-          "notes": "Price from Moken forum community thread (users report $150 via HeliumDeploy). Requires vehicle + phone with ROVR app; ~5W typical USB draw, not officially published. No membership/RTK fee — RTK connection is free per community."
+          "notes": "Price $199 from official ROVR store (shop.rovr.network/products/tarantulax), verified 2026-10-03. Previously $150 via HeliumDeploy (no longer sold there)."
         },
         {
           "variant_name": "LightCone (LC)",
-          "price_usd": 2500,
+          "price_usd": 2499,
           "power_watts": null,
-          "notes": "Price from Moken forum community thread (~$2500). Earns 10x TX rate per official tokenomics. 1 TX + 1 LC on same vehicle permitted; running multiple of the same on one vehicle gets an F tier (0 rewards). Direct product page: https://shop.rovr.network/products/lightcone"
+          "notes": "Price from Moken forum community thread (~$2500). Earns 10x TX rate per official tokenomics. 1 TX + 1 LC on same vehicle permitted; running multiple of the same on one vehicle gets an F tier (0 rewards). Direct product page: https://shop.rovr.network/products/lightcone Official store price $2,499 verified 2026-10-03 (shop.rovr.network/products/lightcone)."
         }
       ],
       "earnings_model": "Per-km base rewards with data-quality tiers (A=100% to D=25%, F=0) and weekly road-revisit decay (50% reduction per 2 extra visits per road, reset Mondays). Halving yearly from TGE Apr 26, 2025.",
@@ -602,7 +602,7 @@
         "https://moken.io/forum/406/how-is-it-possible-to-make-any-money-with-the-rovr-tarantula-x",
         "https://heliumdeploy.com/products/rovr-tarantulax"
       ],
-      "last_verified": "2026-10-02",
+      "last_verified": "2026-10-03",
       "data_quality": "solid",
       "affiliate_note": "HeliumDeploy sells the TX and runs spend-based Discord clubs; Moken forum users share HeliumDeploy affiliate codes (e.g. YAKOBYAKOB, JDJD), suggesting a reseller affiliate program exists."
     },
