@@ -586,7 +586,7 @@
           "variant_name": "LightCone (LC)",
           "price_usd": 2500,
           "power_watts": null,
-          "notes": "Price from Moken forum community thread (~$2500). Earns 10x TX rate per official tokenomics. 1 TX + 1 LC on same vehicle permitted; running multiple of the same on one vehicle gets an F tier (0 rewards)."
+          "notes": "Price from Moken forum community thread (~$2500). Earns 10x TX rate per official tokenomics. 1 TX + 1 LC on same vehicle permitted; running multiple of the same on one vehicle gets an F tier (0 rewards). Direct product page: https://shop.rovr.network/products/lightcone"
         }
       ],
       "earnings_model": "Per-km base rewards with data-quality tiers (A=100% to D=25%, F=0) and weekly road-revisit decay (50% reduction per 2 extra visits per road, reset Mondays). Halving yearly from TGE Apr 26, 2025.",
@@ -596,7 +596,7 @@
         "high": 160,
         "basis": "TarantulaX at current year-2 rate of 0.8 ROVR/km for 20-200 km/day, before quality-tier and revisit-decay adjustments; LC earns 8 ROVR/km (10x)"
       },
-      "affiliate_url": "https://heliumdeploy.com?sca_ref=9938687.bAGNgOUGqm",
+      "affiliate_url": "https://shop.rovr.network/products/tarantulax",
       "sources": [
         "https://rovr-network.gitbook.io/rovr-docs/rovr-tokenomics/rovr-tokenomics",
         "https://moken.io/forum/406/how-is-it-possible-to-make-any-money-with-the-rovr-tarantula-x",
