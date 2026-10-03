@@ -220,7 +220,7 @@
           "variant_name": "Helium Mobile Hotspot Outdoor",
           "price_usd": 499.99,
           "power_watts": null,
-          "notes": "Live on store.hellohelium.com; $499.99 via Open Graph metadata. Outdoor Wi-Fi offload radio, earns HNT. Power draw not published."
+          "notes": "Live on store.hellohelium.com; $499.99 via Open Graph metadata. Outdoor Wi-Fi offload radio, earns HNT. Power draw not published. Direct HeliumDeploy product page: https://heliumdeploy.com/products/helium-outdoor-wifi-hotspot"
         },
         {
           "variant_name": "CBRS small cells (FreedomFi/Baicells/MosoLabs/Bobcat)",
@@ -232,7 +232,7 @@
       "earnings_model": "Wi-Fi/CBRS hotspots earn HNT for coverage and data transfer (carrier offload); rewards governed by HIP-103 area multipliers (A/B/C) — dense high-traffic 'A' areas earn more, 'C' low-traffic areas as low as 0.03x since the April 2025 revision. CRITICAL: MOBILE emissions ceased 2026-01-15 per HIP-138 (per Helium docs); mobile participants are now rewarded directly in HNT, not new MOBILE tokens. MOBILE remains redeemable for HNT via the Subnetwork Treasury.",
       "estimate_source": "official",
       "typical_daily_tokens": null,
-      "affiliate_url": "https://heliumdeploy.com?sca_ref=9938687.bAGNgOUGqm",
+      "affiliate_url": "https://heliumdeploy.com/products/helium-mobile-wifi-hotspot?sca_ref=9938687.bAGNgOUGqm",
       "sources": [
         "https://store.hellohelium.com/collections/all-products/products/helium-mobile-hotspot",
         "https://store.hellohelium.com/collections/all-products/products/outdoor-helium-mobile-hotspot",
@@ -292,7 +292,7 @@
         "high": 12,
         "basis": "GEODNET whitepaper halving schedule: triple-band max 12 GEOD/day in the year ending 2026-06-30, 6/day after the June 30, 2026 halving; actual payout scaled by GIP6 data-quality multiplier"
       },
-      "affiliate_url": "https://heliumdeploy.com?sca_ref=9938687.bAGNgOUGqm",
+      "affiliate_url": "https://heliumdeploy.com/products/geodnet-mobilecm-triple-band?sca_ref=9938687.bAGNgOUGqm",
       "sources": [
         "https://store.geodnet.com/products/mobilecm-triple-band-gnss-base-station",
         "https://support.geodnet.com/why-is-my-old-miner-only-getting-24-geod-per-day",
@@ -318,7 +318,7 @@
           "variant_name": "HYFIX MGW310 — Wingbits + GEODNET dual miner",
           "price_usd": 1095,
           "power_watts": 5.5,
-          "notes": "Official spec: <5.5 W. Weatherproof all-in-one: triple-band GNSS RTK base station (earns GEOD) + 1090 MHz ADS-B SDR (earns WINGS). In stock at HeliumDeploy $1,095 (Sept 2026); Paradox Wireless also lists $1,095. Announced in the Sept 2024 Wingbits/GEODNET partnership press release as the 'WB300'; shipped as MGW310 (pre-order $995, shipped Jan 2025)."
+          "notes": "Official spec: <5.5 W. Weatherproof all-in-one: triple-band GNSS RTK base station (earns GEOD) + 1090 MHz ADS-B SDR (earns WINGS). In stock at HeliumDeploy $1,095 (Sept 2026); Paradox Wireless also lists $1,095. Announced in the Sept 2024 Wingbits/GEODNET partnership press release as the 'WB300'; shipped as MGW310 (pre-order $995, shipped Jan 2025). Direct HeliumDeploy product page: https://heliumdeploy.com/products/wingbits-mgw310"
         }
       ],
       "earnings_model": "Daily pool: 24 WINGS added per qualifying hex (100+ positional ADS-B messages that day); each station's share computed via PageRank (unique-coverage importance + station performance). Early Participant Rewards: +2 WINGS per covered hex/day for the first year after mainnet (TGE April 22, 2026), then -10%/yr for 5 years. Airport Hex bonus: 24 bonus WINGS/day per eligible hex near 500 major airports (low-altitude <6,000 ft tracking). One rewarded station per Res-6 hex — reserve your hex before buying.",
@@ -328,7 +328,7 @@
         "high": 24,
         "basis": "Official docs pool mechanics (24 WINGS per qualifying hex/day, PageRank split); community reports ~24/day for a sole station in a full-coverage hex, ~12/day in shared hexes, plus 2/hex/day EPR through April 2027"
       },
-      "affiliate_url": "https://heliumdeploy.com?sca_ref=9938687.bAGNgOUGqm",
+      "affiliate_url": "https://heliumdeploy.com/products/wingbits-wb200?sca_ref=9938687.bAGNgOUGqm",
       "sources": [
         "https://docs.wingbits.com/get-started/hardware-needed",
         "https://docs.wingbits.com/rewards/how-rewards-work",
@@ -486,7 +486,7 @@
       "earnings_model": "Stations earn WXM daily based on data quality, cell density (max ~10 rewardable stations per hex), location stability and consistency. Daily reward is calculated by the reward mechanism and varies; keeping the station online in a non-saturated cell with high-quality data maximizes earnings.",
       "estimate_source": "community",
       "typical_daily_tokens": null,
-      "affiliate_url": "https://heliumdeploy.com?sca_ref=9938687.bAGNgOUGqm",
+      "affiliate_url": "https://heliumdeploy.com/products/weatherxm-d1-wifi-weather-station-wb1200?sca_ref=9938687.bAGNgOUGqm",
       "sources": [
         "https://weatherxm.com/shop/",
         "https://hexaspot.com/products/weatherxm-ws2000-helium-lorawan",
