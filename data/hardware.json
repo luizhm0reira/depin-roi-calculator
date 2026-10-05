@@ -418,19 +418,13 @@
           "variant_name": "Bee LTE (current flagship)",
           "price_usd": 589,
           "power_watts": null,
-          "notes": "Current model (2026). Upfront price was $589 per Oct 2025 coverage before the Bee Membership launched; launch price Feb 2024 was $549 LTE / $449 WiFi. Powered by car USB; no official wattage published. Company rebranded to 'Bee Maps' (Oct 2025)."
-        },
-        {
-          "variant_name": "Bee WiFi (current)",
-          "price_usd": 449,
-          "power_watts": null,
-          "notes": "WiFi-only variant, $449 at launch (Feb 2024). eBay third-party listings for new Bee LTE+WiFi units around $449 in Sep 2026."
+          "notes": "Current model (2026), $589 outright on beemaps.com (verified 2026-10-05). WiFi-only Bee ($449) discontinued and removed from the store. Bee Membership launched Oct 2025: $19/mo x 24 mo ($456 total) bundles Bee LTE hardware + LTE connectivity + Beekeeper fleet software. Powered by car USB; no official wattage published. Company rebranded to \"Bee Maps\" (Oct 2025)."
         },
         {
           "variant_name": "Bee Membership (US)",
           "price_usd": null,
           "power_watts": null,
-          "notes": "$19/month x 24 months (total $456) bundled: Bee LTE hardware + LTE connectivity + Beekeeper fleet software. Launched Oct 2025 alongside $32M raise (Pantera Capital)."
+          "notes": "$19/month x 24 months (total $456) bundled: Bee LTE hardware + LTE connectivity + Beekeeper fleet software. Launched Oct 2025 alongside $32M raise (Pantera Capital). Still offered on beemaps.com as of 2026-10-05."
         },
         {
           "variant_name": "Hivemapper Dashcam / Dashcam S (2022, discontinued)",
@@ -444,11 +438,11 @@
       "typical_daily_tokens": null,
       "affiliate_url": null,
       "sources": [
+        "https://beemaps.com",
         "https://blockworks.com/news/hivemapper-raise-bee-dashcams",
-        "https://techcrunch.com/2024/02/21/hivemapper-bee-dashcam-price-preorder/",
         "https://cryptoadventure.com/hivemapper-review-2026-honey-bee-cameras-and-decentralized-map-data/"
       ],
-      "last_verified": "2026-10-02",
+      "last_verified": "2026-10-05",
       "data_quality": "solid",
       "affiliate_note": "Authorized reseller FreshMiners runs creator affiliate codes (e.g. 5% off code ILCAPOFOX seen on YouTube). Bee purchase promos (e.g. 4000 HONEY bonus after mapping 2000 km) tracked by DePIN Hub."
     },
@@ -481,6 +475,18 @@
           "price_usd": 70,
           "power_watts": null,
           "notes": "Sold as $70 replacement part on weatherxm.com (in stock, crawled Sep 2026), not a standalone current bundle. Older WiFi bundle variant (WB1200) now superseded by D1."
+        },
+        {
+          "variant_name": "Pulse Gateway (accessory)",
+          "price_usd": 530,
+          "power_watts": null,
+          "notes": "Standalone Pulse 4G/LTE gateway from the weatherxm.com accessories shop (verified 2026-10-05). Pairs with station hardware for off-grid connectivity."
+        },
+        {
+          "variant_name": "M5 Gateway (accessory)",
+          "price_usd": 70,
+          "power_watts": null,
+          "notes": "M5 gateway accessory from the weatherxm.com accessories shop (verified 2026-10-05)."
         }
       ],
       "earnings_model": "Stations earn WXM daily based on data quality, cell density (max ~10 rewardable stations per hex), location stability and consistency. Daily reward is calculated by the reward mechanism and varies; keeping the station online in a non-saturated cell with high-quality data maximizes earnings.",
@@ -492,7 +498,7 @@
         "https://hexaspot.com/products/weatherxm-ws2000-helium-lorawan",
         "https://dapp.expert/analytics/weatherxm-wxm-how-the-depin-weather-network-and-data-economy-work-1787043783-884861"
       ],
-      "last_verified": "2026-10-02",
+      "last_verified": "2026-10-05",
       "data_quality": "solid",
       "affiliate_note": "WeatherXM runs an official reseller/distributor program (listed on their shop page). Extra 10% off for purchases paid in $WXM."
     },
@@ -504,21 +510,9 @@
       "variants": [
         {
           "variant_name": "DIMO LTE R1 (current flagship)",
-          "price_usd": 299,
+          "price_usd": 99.99,
           "power_watts": null,
-          "notes": "Plugs into OBD2 port; LTE with 2G fallback, widest vehicle compatibility, best EV support. Includes 6-month LTE subscription per reseller docs. Price from Jun 2025 comparison article - MAY BE STALE; official store (shop.dimo.zone) could not be fetched for verification. Re-verify before publishing."
-        },
-        {
-          "variant_name": "DIMO AutoPi",
-          "price_usd": 249,
-          "power_watts": null,
-          "notes": "Raspberry Pi-based OBD2 dongle (4G + GPS), hacker-friendly. ~$249 per Jun 2025 article; price may be stale. Still recognized as a device node type in current DIMO platform docs."
-        },
-        {
-          "variant_name": "DIMO Macaron",
-          "price_usd": 99,
-          "power_watts": null,
-          "notes": "Budget OBD2 dongle using Helium LoRa (needs nearby Helium coverage), ~1/3 the rewards of AutoPi per reseller, manual/phone-tethered sync. Powers on/off with ignition. ~$99 per Jun 2025 article; price may be stale. Supported-car requirement: 2008+."
+          "notes": "Official store moved to drivedimo.com (verified 2026-10-05, in stock; single $99.99, 2-pack $179.98). Plugs into OBD2; LTE with 2G fallback. Ships with 1 free month of DIMO Pro, then $8.99/mo subscription — factor into payback."
         },
         {
           "variant_name": "Software-only connection (no hardware)",
@@ -536,13 +530,12 @@
       },
       "affiliate_url": null,
       "sources": [
-        "https://medium.com/@imrankhan.digital/what-makes-dimo-lte-r1-dimo-autopi-and-dimo-macaron-different-85da9613b38e",
-        "https://freshminers.com/shop/hardware/dimo-lte-r1/",
-        "https://support.drivedimo.com/en-US/installing-the-dimo-macaron-331875"
+        "https://drivedimo.com/products/dimo-lte-r1",
+        "https://medium.com/@imrankhan.digital/what-makes-dimo-lte-r1-dimo-autopi-and-dimo-macaron-different-85da9613b38e"
       ],
-      "last_verified": "2026-10-02",
+      "last_verified": "2026-10-05",
       "data_quality": "shaky",
-      "affiliate_note": "Reseller FreshMiners sells all three devices with affiliate/discount codes; YouTube creator codes common. No official DIMO affiliate program found."
+      "affiliate_note": "AutoPi ($249) and Macaron ($99) removed from the official store 2026-10-05 — DIMO now sells the LTE R1 only. R1 price dropped $299 → $99.99."
     },
     {
       "id": "nubila-marco",
@@ -580,13 +573,13 @@
           "variant_name": "TarantulaX (TX)",
           "price_usd": 199,
           "power_watts": null,
-          "notes": "Price $199 from official ROVR store (shop.rovr.network/products/tarantulax), verified 2026-10-03. Previously $150 via HeliumDeploy (no longer sold there)."
+          "notes": "Last official price $199 (shop.rovr.network, verified 2026-10-03) — official store closed 2026-10-05. EU reseller EUGEO lists the TX at €169 (~$197) with 8 in stock as of 2026-10-05."
         },
         {
           "variant_name": "LightCone (LC)",
           "price_usd": 2499,
           "power_watts": null,
-          "notes": "Price from Moken forum community thread (~$2500). Earns 10x TX rate per official tokenomics. 1 TX + 1 LC on same vehicle permitted; running multiple of the same on one vehicle gets an F tier (0 rewards). Direct product page: https://shop.rovr.network/products/lightcone Official store price $2,499 verified 2026-10-03 (shop.rovr.network/products/lightcone)."
+          "notes": "Last official price $2,499 (shop.rovr.network, verified 2026-10-03) — official store closed 2026-10-05. Earns 10x TX rate per official tokenomics. No EUGEO listing found for the LC."
         }
       ],
       "earnings_model": "Per-km base rewards with data-quality tiers (A=100% to D=25%, F=0) and weekly road-revisit decay (50% reduction per 2 extra visits per road, reset Mondays). Halving yearly from TGE Apr 26, 2025.",
@@ -596,15 +589,16 @@
         "high": 160,
         "basis": "TarantulaX at current year-2 rate of 0.8 ROVR/km for 20-200 km/day, before quality-tier and revisit-decay adjustments; LC earns 8 ROVR/km (10x)"
       },
-      "affiliate_url": "https://shop.rovr.network/products/tarantulax",
+      "affiliate_url": "https://eugeo.io/product/tarantulax/",
       "sources": [
         "https://rovr-network.gitbook.io/rovr-docs/rovr-tokenomics/rovr-tokenomics",
         "https://moken.io/forum/406/how-is-it-possible-to-make-any-money-with-the-rovr-tarantula-x",
-        "https://heliumdeploy.com/products/rovr-tarantulax"
+        "https://heliumdeploy.com/products/rovr-tarantulax",
+        "https://eugeo.io/product/tarantulax/"
       ],
-      "last_verified": "2026-10-03",
+      "last_verified": "2026-10-05",
       "data_quality": "solid",
-      "affiliate_note": "HeliumDeploy sells the TX and runs spend-based Discord clubs; Moken forum users share HeliumDeploy affiliate codes (e.g. YAKOBYAKOB, JDJD), suggesting a reseller affiliate program exists."
+      "affiliate_note": "Official ROVR store (shop.rovr.network) closed as of 2026-10-05. Buy button now points to EUGEO, a third-party EU reseller (EUR pricing, ships from Europe, not an affiliate link)."
     },
     {
       "id": "denet-node",
@@ -695,6 +689,54 @@
       "last_verified": "2026-10-02",
       "data_quality": "solid",
       "affiliate_note": null
+    },
+    {
+      "id": "geodnet-rtk-devices",
+      "name": "GEODNET RTK Devices (receivers, drone & flight computer)",
+      "network": "GEODNET",
+      "token_symbol": "GEOD",
+      "earnings_model": "User-side RTK devices, NOT base-station miners: they consume GEODNET corrections rather than earning base mining rewards. GEO-PULSE pairs with the GEO-PULSE Quest App where users complete tasks to earn GEOD (variable, task-based — not hardware ROI). Enter your own earnings estimate or leave blank.",
+      "estimate_source": "official",
+      "typical_daily_tokens": null,
+      "affiliate_url": null,
+      "sources": [
+        "https://geodnet.com/products"
+      ],
+      "last_verified": "2026-10-05",
+      "data_quality": "solid",
+      "affiliate_note": null,
+      "variants": [
+        {
+          "variant_name": "GEO-MEASURE Handheld RTK Receiver",
+          "price_usd": 695,
+          "power_watts": null,
+          "notes": "Ultra-portable Bluetooth LE GNSS RTK receiver for phone-based centimeter surveying; includes 1 year of free GEODNET RTK corrections. Carbon fiber survey pole kit also sold. Does not mine GEOD."
+        },
+        {
+          "variant_name": "GEO-SWARM drone-in-a-box (pre-order)",
+          "price_usd": 2000,
+          "power_watts": null,
+          "notes": "Autonomous home-security drone-in-a-box (drone + charging dock + camera + app), NDAA-compliant, powered by GEODNET RTK. Pre-order on geodnet.com/products. Does not mine GEOD."
+        },
+        {
+          "variant_name": "GEO-PULSE RTK GNSS Receiver",
+          "price_usd": 149,
+          "power_watts": null,
+          "notes": "Compact triple-frequency RTK receiver for fleets/mobility/drones, IMU dead reckoning, ROS2 support. Pairs with the GEO-PULSE Quest App (task-based GEOD earnings). Does not mine GEOD."
+        },
+        {
+          "variant_name": "HYFIX H1 Flight Computer",
+          "price_usd": null,
+          "power_watts": null,
+          "notes": "High-performance AI compute module with integrated RTK/IMU/comms. No public price on geodnet.com/products as of 2026-10-05."
+        },
+        {
+          "variant_name": "HYFIX Drone Platform",
+          "price_usd": null,
+          "power_watts": null,
+          "notes": "Autonomous-ready drone platform with centimeter-level GEODNET RTK positioning. No public price on geodnet.com/products as of 2026-10-05."
+        }
+      ]
     }
   ]
 }
