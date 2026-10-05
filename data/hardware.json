@@ -546,14 +546,14 @@
         "high": 2.1,
         "basis": "community reports of 5-15 DIMO per week for LTE devices, converted to daily"
       },
-      "affiliate_url": null,
+      "affiliate_url": "https://drivedimo.com/products/dimo-lte-r1",
       "sources": [
         "https://drivedimo.com/products/dimo-lte-r1",
         "https://medium.com/@imrankhan.digital/what-makes-dimo-lte-r1-dimo-autopi-and-dimo-macaron-different-85da9613b38e"
       ],
       "last_verified": "2026-10-05",
       "data_quality": "shaky",
-      "affiliate_note": "AutoPi ($249) and Macaron ($99) discontinued 2026-10-05 — DIMO now sells the LTE R1 only; both kept in the calculator for secondary-market / existing-owner ROI. R1 price dropped $299 → $99.99."
+      "affiliate_note": "No official DIMO affiliate program found — Buy button links the official DIMO store (non-affiliate)."
     },
     {
       "id": "nubila-marco",
