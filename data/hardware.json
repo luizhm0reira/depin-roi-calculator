@@ -698,15 +698,15 @@
       "earnings_model": "Nodes publish data to the live map (internet latency/speed, outage logs, Wi-Fi, temp/humidity) and share a daily GALU reward emission based on uptime and location-attested contribution; paid add-ons (LoRa frames, encrypted backup) cost GALU fees. GALU currently has no exchange listing or realizable market value.",
       "estimate_source": "community",
       "typical_daily_tokens": null,
-      "affiliate_url": null,
+      "affiliate_url": "https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html?sensecap_affiliate=zDAXnT9",
       "sources": [
         "https://sensmos.com/guide/",
         "https://sensmos.com/manual/",
         "https://github.com/Galusz/sensmos-homeassistant"
       ],
-      "last_verified": "2026-10-02",
+      "last_verified": "2026-10-05",
       "data_quality": "solid",
-      "affiliate_note": null
+      "affiliate_note": "Seeed Studio affiliate (code zDAXnT9, approved 2026-10-05). Buy button links the XIAO ESP32S3 ($7.49) — the board the Sensmos guide recommends for new nodes. Node itself is DIY; price in the calculator stays a BOM estimate."
     },
     {
       "id": "geodnet-rtk-devices",
