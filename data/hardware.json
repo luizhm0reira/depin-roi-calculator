@@ -58,14 +58,14 @@
       "earnings_model": "Same Helium IoT PoC model as other full hotspots: earns IOT for beacons, challenges, witnesses and data transfer; placement near window, reward scales with witnessed hotspots in hex.",
       "estimate_source": "official",
       "typical_daily_tokens": null,
-      "affiliate_url": null,
+      "affiliate_url": "https://www.seeedstudio.com/SenseCAP-M1-LoRaWAN-Indoor-Gateway-US915-p-5023.html?sensecap_affiliate=zDAXnT9",
       "sources": [
         "https://www.seeedstudio.com/SenseCAP-M1-LoRaWAN-Indoor-Gateway-US915-p-5023.html",
         "https://vesuviustreamline.com/en/product/1754/sensecap-m1-lorawan-indoor-gateway-eu868-helium-miner-in-stock.html"
       ],
-      "last_verified": "2026-10-02",
+      "last_verified": "2026-10-05",
       "data_quality": "solid",
-      "affiliate_note": null
+      "affiliate_note": "Seeed Studio affiliate approved 2026-10-05 (code zDAXnT9)."
     },
     {
       "id": "sensecap-m2",
@@ -83,14 +83,14 @@
       "earnings_model": "Not applicable — not Helium-compatible, earns nothing on Helium.",
       "estimate_source": "official",
       "typical_daily_tokens": null,
-      "affiliate_url": null,
+      "affiliate_url": "https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html?sensecap_affiliate=zDAXnT9",
       "sources": [
         "https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html",
         "https://wiki.seeedstudio.com/SenseCAP-M2-Data-Only-FAQ/"
       ],
-      "last_verified": "2026-10-02",
+      "last_verified": "2026-10-05",
       "data_quality": "solid",
-      "affiliate_note": null
+      "affiliate_note": "Seeed Studio affiliate approved 2026-10-05 (code zDAXnT9)."
     },
     {
       "id": "milesight-ug65",
