@@ -77,7 +77,7 @@
           "variant_name": "US915 / EU868 (SX1302)",
           "price_usd": 99,
           "power_watts": null,
-          "notes": "IMPORTANT: the currently sold 'M2 Multi-Platform' gateway explicitly does NOT support the Helium network (cannot connect to SenseCAP Hotspot App/Dashboard) per seeedstudio.com. An older SenseCAP MX-series 'M2 Data Only' did support Helium but is not the current product. DO NOT present the M2 as Helium-compatible hardware in the calculator."
+          "notes": "IMPORTANT: the currently sold 'M2 Multi-Platform' gateway explicitly does NOT support the Helium network (cannot connect to SenseCAP Hotspot App/Dashboard) per seeedstudio.com. An older SenseCAP MX-series 'M2 Data Only' did support Helium but is not the current product."
         }
       ],
       "earnings_model": "Not applicable — not Helium-compatible, earns nothing on Helium.",
