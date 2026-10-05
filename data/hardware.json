@@ -716,13 +716,13 @@
       "earnings_model": "User-side RTK devices, NOT base-station miners: they consume GEODNET corrections rather than earning base mining rewards. GEO-PULSE pairs with the GEO-PULSE Quest App where users complete tasks to earn GEOD (variable, task-based — not hardware ROI). Enter your own earnings estimate or leave blank.",
       "estimate_source": "official",
       "typical_daily_tokens": null,
-      "affiliate_url": null,
+      "affiliate_url": "https://geodnet.com/products",
       "sources": [
         "https://geodnet.com/products"
       ],
       "last_verified": "2026-10-05",
       "data_quality": "solid",
-      "affiliate_note": null,
+      "affiliate_note": "No GEODNET affiliate program found — Buy button links the official products page (non-affiliate).",
       "variants": [
         {
           "variant_name": "GEO-MEASURE Handheld RTK Receiver",
