@@ -431,6 +431,12 @@
           "price_usd": 549,
           "power_watts": null,
           "notes": "Original models: Dashcam $549, Dashcam S $649. Discontinued; replaced by the Bee (confirmed by community unboxing/reviews referring to them as old models HDC/HDC-S). Secondary market only."
+        },
+        {
+          "variant_name": "Bee WiFi (discontinued)",
+          "price_usd": 449,
+          "power_watts": null,
+          "notes": "DISCONTINUED — removed from beemaps.com 2026-10-05; only Bee LTE ($589) and Bee Membership remain. Last official price $449 (launch Feb 2024). Secondary market only."
         }
       ],
       "earnings_model": "Drive-to-earn: contributors earn HONEY for useful 4K street-level map coverage. Weekly rewards depend on global/region map progress, freshness, data quality and contribution type; Map Credits purchased by enterprise customers burn HONEY, which is reallocated to contributor reward pools.",
@@ -515,6 +521,18 @@
           "notes": "Official store moved to drivedimo.com (verified 2026-10-05, in stock; single $99.99, 2-pack $179.98). Plugs into OBD2; LTE with 2G fallback. Ships with 1 free month of DIMO Pro, then $8.99/mo subscription — factor into payback."
         },
         {
+          "variant_name": "DIMO AutoPi (discontinued)",
+          "price_usd": 249,
+          "power_watts": null,
+          "notes": "DISCONTINUED — removed from the official DIMO store 2026-10-05 (DIMO now sells the LTE R1 only). Last official price $249. Raspberry Pi-based OBD2 dongle (4G + GPS), hacker-friendly. Secondary market only."
+        },
+        {
+          "variant_name": "DIMO Macaron (discontinued)",
+          "price_usd": 99,
+          "power_watts": null,
+          "notes": "DISCONTINUED — removed from the official DIMO store 2026-10-05. Last official price $99. Budget OBD2 dongle using Helium LoRa (needs nearby Helium coverage), ~1/3 the rewards of AutoPi per reseller. Secondary market only."
+        },
+        {
           "variant_name": "Software-only connection (no hardware)",
           "price_usd": 0,
           "power_watts": 0,
@@ -535,7 +553,7 @@
       ],
       "last_verified": "2026-10-05",
       "data_quality": "shaky",
-      "affiliate_note": "AutoPi ($249) and Macaron ($99) removed from the official store 2026-10-05 — DIMO now sells the LTE R1 only. R1 price dropped $299 → $99.99."
+      "affiliate_note": "AutoPi ($249) and Macaron ($99) discontinued 2026-10-05 — DIMO now sells the LTE R1 only; both kept in the calculator for secondary-market / existing-owner ROI. R1 price dropped $299 → $99.99."
     },
     {
       "id": "nubila-marco",
