@@ -755,6 +755,93 @@
           "notes": "Autonomous-ready drone platform with centimeter-level GEODNET RTK positioning. No public price on geodnet.com/products as of 2026-10-05."
         }
       ]
+    },
+    {
+      "id": "worldmobile-airnodes",
+      "name": "World Mobile AirNode",
+      "network": "World Mobile",
+      "token_symbol": "WMTx",
+      "earnings_model": "AirNode operators earn WMTx (or local fiat where crypto rewards are not permitted) based on traffic volume carried, quality of service (QoS), and subscriber count. Hosts who provide the physical location and power earn a revenue share without owning hardware. World Mobile reports $1M+ in rewards distributed to date. No official per-device daily earnings figure is published — rewards are inherently location/traffic-dependent.",
+      "estimate_source": "official",
+      "typical_daily_tokens": null,
+      "affiliate_url": null,
+      "sources": [
+        "https://medium.com/@zekanemking/overview-of-the-world-mobile-sharing-c62651445e7e",
+        "https://cryptobriefing.com/world-mobile-accelerates-u-s-network-growth-with-second-batch-of-airnode-sales/",
+        "https://airnode.worldmobile.net/airnode-operate"
+      ],
+      "last_verified": "2026-10-05",
+      "data_quality": "shaky",
+      "affiliate_note": null,
+      "variants": [
+        {
+          "variant_name": "Spark",
+          "price_usd": 62.99,
+          "power_watts": null,
+          "notes": "Entry Wi-Fi AirNode, ~150 m radius (homes, shops); mesh-capable. Sold via periodic drops on the official platform; drops sell out quickly. Price from Dec 2025 community guide — re-verify before publishing."
+        },
+        {
+          "variant_name": "Link",
+          "price_usd": 749,
+          "power_watts": null,
+          "notes": "Endpoint connectivity for high-speed internet at customer sites. $699 for Early Access Whitelist members per Aug 2024 Batch Two announcement."
+        },
+        {
+          "variant_name": "Portal 180",
+          "price_usd": 9000,
+          "power_watts": null,
+          "notes": "High-capacity, neighborhood-scale. Price from Dec 2025 community guide — re-verify before publishing."
+        },
+        {
+          "variant_name": "Portal 360",
+          "price_usd": 18000,
+          "power_watts": null,
+          "notes": "Dual-unit, wider coverage. Price from Dec 2025 community guide — re-verify before publishing."
+        },
+        {
+          "variant_name": "Apex 90",
+          "price_usd": 15999,
+          "power_watts": null,
+          "notes": "Supports up to 250 Links; dense areas. Price confirmed in Aug 2024 Batch Two press release."
+        },
+        {
+          "variant_name": "Apex 180",
+          "price_usd": 31998,
+          "power_watts": null,
+          "notes": "Dual-unit, up to 500 Links. Price from Dec 2025 community guide only — less corroborated than the others."
+        },
+        {
+          "variant_name": "Titan",
+          "price_usd": 100000,
+          "power_watts": null,
+          "notes": "Long-range backbone for large-scale/remote deployments. Price from Dec 2025 community guide."
+        }
+      ]
+    },
+    {
+      "id": "natix-vx360",
+      "name": "NATIX VX360",
+      "network": "NATIX",
+      "token_symbol": "NATIX",
+      "earnings_model": "Drivers earn $NATIX for driving footage that NATIX monetizes for HD map-making and autonomous-vehicle scenario generation. Rewards depend on miles driven, footage value, and data scarcity in the driver's geography; only footage captured while driving (not parked, not in privacy zones) counts. NATIX's official claim: \"Earn up to $60 USD (in $NATIX) per month\" based on January 2026 token rates, with expected ROI in 6-12 months of use. No official per-device daily-token figure is published.",
+      "estimate_source": "official",
+      "typical_daily_tokens": null,
+      "affiliate_url": null,
+      "sources": [
+        "https://www.natix.network/vx360-depin-dashcam",
+        "https://chainwire.org/2024/11/26/natix-launches-vx360-unlocking-360-tesla-dashcam-footage-for-mapping-and-autonomous-driving/"
+      ],
+      "last_verified": "2026-10-05",
+      "data_quality": "solid",
+      "affiliate_note": null,
+      "variants": [
+        {
+          "variant_name": "VX360 (Tesla-only)",
+          "price_usd": 379,
+          "power_watts": null,
+          "notes": "Price $379 verified on the official buy widget 2026-10-05 (\"VX360 Ultimate Set — includes Firmware + Hardware\", in stock, ships in 5-10 days; 10% cashback for USDC/Solana Pay). TESLA ONLY — Model S/X (2021+), Model 3, Model Y, Cybertruck. Car USB powered (glovebox). 256 GB storage, ~20h+ video from 4 Tesla cameras, L1 GNSS, Wi-Fi + BLE. Ships to USA (excl. Alaska), Canada, EU, UK, Norway, Switzerland, Singapore, Japan."
+        }
+      ]
     }
   ]
 }
