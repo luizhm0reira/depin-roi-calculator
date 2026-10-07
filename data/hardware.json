@@ -713,14 +713,14 @@
       "name": "GEODNET RTK Devices (receivers, drone & flight computer)",
       "network": "GEODNET",
       "token_symbol": "GEOD",
-      "earnings_model": "User-side RTK devices, NOT base-station miners: they consume GEODNET corrections rather than earning base mining rewards. GEO-PULSE pairs with the GEO-PULSE Quest App where users complete tasks to earn GEOD (variable, task-based — not hardware ROI). Enter your own earnings estimate or leave blank.",
+      "earnings_model": "User-side RTK devices, NOT base-station miners: they consume GEODNET corrections rather than earning base mining rewards. GEO-PULSE pairs with the GEO-PULSE Quest App where users complete tasks to earn GEOD (variable, task-based — not hardware ROI). No hardware payback to compute.",
       "estimate_source": "official",
       "typical_daily_tokens": null,
       "affiliate_url": "https://geodnet.com/products",
       "sources": [
         "https://geodnet.com/products"
       ],
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-06",
       "data_quality": "solid",
       "affiliate_note": "No GEODNET affiliate program found — Buy button links the official products page (non-affiliate).",
       "variants": [
@@ -754,7 +754,8 @@
           "power_watts": null,
           "notes": "Autonomous-ready drone platform with centimeter-level GEODNET RTK positioning. No public price on geodnet.com/products as of 2026-10-05."
         }
-      ]
+      ],
+      "non_mining": true
     },
     {
       "id": "worldmobile-airnodes",

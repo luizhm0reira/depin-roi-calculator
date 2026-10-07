@@ -109,8 +109,9 @@
 "use strict";
 /*__DATA__*/
 
-const COINGECKO_IDS = { HNT:'helium', IOT:'helium-iot', HONEY:'hivemapper', WXM:'weatherxm', DIMO:'dimo', GEOD:'geodnet', ONO:'onocoy' };
+const COINGECKO_IDS = { HNT:'helium', IOT:'helium-iot', HONEY:'hivemapper', WXM:'weatherxm', DIMO:'dimo', GEOD:'geodnet', ONO:'onocoy', ROVR:'rovr-network' };
 // Tokens without a verified CoinGecko id fall back to manual price entry.
+// ROVR verified live via api.coingecko.com 2026-10-05 ($0.00016751).
 const BLOCKED_PRODUCTS = {
   'wingbits-diy-byod': { title:'Not a purchasable option', variantIdx:0 },
   'sensecap-m2':      { title:'Not compatible', variantIdx:0 }
@@ -290,8 +291,8 @@ function renderDetailInputs(){
       <input type="number" id="in-elec" step="0.01" min="0" value="${state.elecRate}">
       <div class="hint">US average ≈ $0.16. Adjust to your bill.</div></div>
     <div><label>Est. daily earnings (${p.token_symbol}/day)</label>
-      <input type="number" id="in-tokens" step="any" min="0" placeholder="Enter your estimate" value="${state.dailyTokens}">
-      <div class="hint">${tdt?`Starting point ${tdt.low}–${tdt.high}/day (${esc(tdt.basis).slice(0,140)}…). Always editable — treat as an estimate, not truth.`:'Networks publish no per-device figures — enter your own estimate.'}</div></div>
+      <input type="number" id="in-tokens" step="any" min="0" placeholder="${p.non_mining?'Not applicable — device does not mine':'Enter your estimate'}" value="${p.non_mining?'':state.dailyTokens}"${p.non_mining?' disabled':''}>
+      <div class="hint">${p.non_mining?`This hardware does not mine ${p.token_symbol} — it is user-side equipment, not a miner. No hardware payback to compute.`:tdt?`Pre-filled with the midpoint of the published range (${tdt.low}–${tdt.high}/day, ${esc(tdt.basis).slice(0,120)}…). Always editable — treat as a starting point, not truth.`:'Networks publish no per-device figures — enter your own estimate.'}</div></div>
     ${liveRow}
   </div>`;
   $('in-elec').oninput=e=>{state.elecRate=parseFloat(e.target.value)||0; updateOutputs();};
@@ -320,6 +321,10 @@ function updateOutputs(){
   }
   if(blocked){
     $('outputs').innerHTML=`<div class="alert warn">No ROI to compute — this is not a viable purchase.</div>`;
+    $('compare').innerHTML=''; return;
+  }
+  if(p.non_mining){
+    $('outputs').innerHTML=`<div class="alert info"><strong>No hardware ROI to compute</strong> — this device does not mine ${p.token_symbol}. It consumes the network's service instead of earning its rewards.</div>`;
     $('compare').innerHTML=''; return;
   }
   if(!variantPurchasable(v)){
