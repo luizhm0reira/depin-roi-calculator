@@ -404,7 +404,7 @@
         "https://www.ardusimple.com/tutorials/how-to-get-paid-for-installing-and-sharing-your-base-station-with-onocoy/",
         "https://www.hackster.io/simeononsecurity/diy-onocoy-ntrip-server-and-reference-station-setup-d5904f"
       ],
-      "last_verified": "2026-10-02",
+      "last_verified": "2026-10-12",
       "data_quality": "sparse",
       "affiliate_note": null
     },
@@ -418,7 +418,7 @@
           "variant_name": "Bee LTE (current flagship)",
           "price_usd": 589,
           "power_watts": null,
-          "notes": "Current model (2026), $589 outright on beemaps.com (verified 2026-10-05). WiFi-only Bee ($449) discontinued and removed from the store. Bee Membership launched Oct 2025: $19/mo x 24 mo ($456 total) bundles Bee LTE hardware + LTE connectivity + Beekeeper fleet software. Powered by car USB; no official wattage published. Company rebranded to \"Bee Maps\" (Oct 2025)."
+          "notes": "Current model (2026). The $589 outright purchase option is NO LONGER listed on beemaps.com/bee as of 2026-10-12 — the page now shows Bee Membership ($19/mo x 24) only. (Caveat: the page's FAQ accordion is JS-driven and an outright mention buried there can't be fully ruled out.) Last verified outright price $589."
         },
         {
           "variant_name": "Bee Membership (US)",
@@ -448,7 +448,7 @@
         "https://blockworks.com/news/hivemapper-raise-bee-dashcams",
         "https://cryptoadventure.com/hivemapper-review-2026-honey-bee-cameras-and-decentralized-map-data/"
       ],
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-12",
       "data_quality": "solid",
       "affiliate_note": "Authorized reseller FreshMiners runs creator affiliate codes (e.g. 5% off code ILCAPOFOX seen on YouTube). Bee purchase promos (e.g. 4000 HONEY bonus after mapping 2000 km) tracked by DePIN Hub."
     },
@@ -521,6 +521,12 @@
           "notes": "Official store moved to drivedimo.com (verified 2026-10-05, in stock; single $99.99, 2-pack $179.98). Plugs into OBD2; LTE with 2G fallback. Ships with 1 free month of DIMO Pro, then $8.99/mo subscription — factor into payback."
         },
         {
+          "variant_name": "DIMO LTE S1 (Americas)",
+          "price_usd": 99.99,
+          "power_watts": 1,
+          "notes": "Americas version, in stock (verified 2026-10-12). Coexists with the LTE R1 listings. OBD2 vehicle device."
+        },
+        {
           "variant_name": "DIMO AutoPi (discontinued)",
           "price_usd": 249,
           "power_watts": null,
@@ -551,7 +557,7 @@
         "https://drivedimo.com/products/dimo-lte-r1",
         "https://medium.com/@imrankhan.digital/what-makes-dimo-lte-r1-dimo-autopi-and-dimo-macaron-different-85da9613b38e"
       ],
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-12",
       "data_quality": "shaky",
       "affiliate_note": "No official DIMO affiliate program found — Buy button links the official DIMO store (non-affiliate)."
     },
@@ -591,7 +597,7 @@
           "variant_name": "TarantulaX (TX)",
           "price_usd": 199,
           "power_watts": null,
-          "notes": "Last official price $199 (shop.rovr.network, verified 2026-10-03) — official store closed 2026-10-05. EU reseller EUGEO lists the TX at €169 (~$197) with 8 in stock as of 2026-10-05."
+          "notes": "Last official price $199 (shop.rovr.network, verified 2026-10-03) — official store closed 2026-10-05. EU reseller EUGEO lists the TX at €169 (~$197) with 8 in stock as of 2026-10-05. HeliumDeploy delisted ALL ROVR hardware (product page 404) as of 2026-10-12; EUGEO remains the buy option."
         },
         {
           "variant_name": "LightCone (LC)",
@@ -611,10 +617,9 @@
       "sources": [
         "https://rovr-network.gitbook.io/rovr-docs/rovr-tokenomics/rovr-tokenomics",
         "https://moken.io/forum/406/how-is-it-possible-to-make-any-money-with-the-rovr-tarantula-x",
-        "https://heliumdeploy.com/products/rovr-tarantulax",
         "https://eugeo.io/product/tarantulax/"
       ],
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-12",
       "data_quality": "solid",
       "affiliate_note": "Official ROVR store (shop.rovr.network) closed as of 2026-10-05. Buy button now points to EUGEO, a third-party EU reseller (EUR pricing, ships from Europe, not an affiliate link)."
     },
@@ -666,7 +671,7 @@
           "variant_name": "HOTSPOT1 WiFi offload device",
           "price_usd": null,
           "power_watts": null,
-          "notes": "No current verifiable listing found. Community guide (Medium, Nov 2025) reports WiFi hotspots ~$200-300 via official store or HeliumDeploy. Official store at karrier.one/hardware showed 'Order Now' as of Aug 2026 crawl — a store closure in 2026 could NOT be verified, nor any ~$290 PHONE product (Karrier One's hardware line is HOTSPOT1 WiFi + Gatekeeper cellular nodes, which require PoE, outdoor IP67, up to 10 km). Depinscan lists a 'Karrier One 01' device with avg cost $5,000. Treat the '$290 reseller phone' claim as UNVERIFIED until a live listing is produced."
+          "notes": "No current verifiable listing found. Community guide (Medium, Nov 2025) reports WiFi hotspots ~$200-300 via official store or HeliumDeploy. Official store at karrier.one/hardware showed 'Order Now' as of Aug 2026 crawl — a store closure in 2026 could NOT be verified, nor any ~$290 PHONE product (Karrier One's hardware line is HOTSPOT1 WiFi + Gatekeeper cellular nodes, which require PoE, outdoor IP67, up to 10 km). Depinscan lists a 'Karrier One 01' device with avg cost $5,000. Treat the '$290 reseller phone' claim as UNVERIFIED until a live listing is produced. Store closure CONFIRMED 2026-10-12: store.karrier.one shows 'Store refresh in progress... evaluating the next generation of Karrier One WiFi hardware.' Unpurchasable."
         }
       ],
       "earnings_model": "Devices auto-earn $KONE based on bandwidth served and uptime via the Karrier Dashboard; Gatekeeper nodes earn based on user/traffic volume they process. Prior research noted hosts currently earn USDsui rather than KONE (KONE not launched) — re-verify.",
@@ -678,7 +683,7 @@
         "https://doncurrent1.medium.com/demystifying-karrier-one-a-beginners-guide-to-the-future-of-decentralized-telecom-e14ceaa37877",
         "https://depinscan.io/en/projects/karrierone"
       ],
-      "last_verified": "2026-10-02",
+      "last_verified": "2026-10-12",
       "data_quality": "sparse",
       "affiliate_note": "Resellers like HeliumDeploy carry affiliate codes (e.g. CRYPTOJAR, 10% off); no Karrier One official affiliate program confirmed."
     },
@@ -720,7 +725,7 @@
       "sources": [
         "https://geodnet.com/products"
       ],
-      "last_verified": "2026-10-06",
+      "last_verified": "2026-10-12",
       "data_quality": "solid",
       "affiliate_note": "No GEODNET affiliate program found — Buy button links the official products page (non-affiliate).",
       "variants": [
@@ -753,6 +758,12 @@
           "price_usd": null,
           "power_watts": null,
           "notes": "Autonomous-ready drone platform with centimeter-level GEODNET RTK positioning. No public price on geodnet.com/products as of 2026-10-05."
+        },
+        {
+          "variant_name": "GEO-MEASURE + Carbon Fiber Survey Pole Kit",
+          "price_usd": 795,
+          "power_watts": null,
+          "notes": "GEO-MEASURE handheld RTK receiver bundled with carbon fiber survey pole kit. store.geodnet.com (2026-10-12). Does not mine GEOD."
         }
       ],
       "non_mining": true
@@ -762,24 +773,25 @@
       "name": "World Mobile AirNode",
       "network": "World Mobile",
       "token_symbol": "WMTx",
-      "earnings_model": "AirNode operators earn WMTx (or local fiat where crypto rewards are not permitted) based on traffic volume carried, quality of service (QoS), and subscriber count. Hosts who provide the physical location and power earn a revenue share without owning hardware. World Mobile reports $1M+ in rewards distributed to date. No official per-device daily earnings figure is published — rewards are inherently location/traffic-dependent.",
+      "earnings_model": "AirNode operator rewards are usage-based and paid in USD or stablecoins (worldmobile.io/airnodes, 2026-10-12): Frontier = fixed monthly base reward; EmberNode = verified-traffic-based approx $0.0042/GB. Hosts who provide the physical location and power earn a revenue share without owning hardware.",
       "estimate_source": "official",
       "typical_daily_tokens": null,
       "affiliate_url": null,
       "sources": [
         "https://medium.com/@zekanemking/overview-of-the-world-mobile-sharing-c62651445e7e",
         "https://cryptobriefing.com/world-mobile-accelerates-u-s-network-growth-with-second-batch-of-airnode-sales/",
-        "https://airnode.worldmobile.net/airnode-operate"
+        "https://airnode.worldmobile.net/airnode-operate",
+        "https://worldmobile.io/airnodes"
       ],
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-12",
       "data_quality": "shaky",
       "affiliate_note": null,
       "variants": [
         {
           "variant_name": "Spark",
-          "price_usd": 62.99,
+          "price_usd": null,
           "power_watts": null,
-          "notes": "Entry Wi-Fi AirNode, ~150 m radius (homes, shops); mesh-capable. Sold via periodic drops on the official platform; drops sell out quickly. Price from Dec 2025 community guide — re-verify before publishing."
+          "notes": "Entry Wi-Fi AirNode, ~150 m radius (homes, shops); mesh-capable. As of 2026-10-12, official page says 'Available to distribution partners only' (Pakistan deployment) — NO public retail. Last public price $62.99 (Dec 2025 drops)."
         },
         {
           "variant_name": "Link",
@@ -813,9 +825,27 @@
         },
         {
           "variant_name": "Titan",
-          "price_usd": 100000,
+          "price_usd": null,
           "power_watts": null,
-          "notes": "Long-range backbone for large-scale/remote deployments. Price from Dec 2025 community guide."
+          "notes": "Long-range backbone for large-scale/remote deployments. Official page now says 'Contact sales for pricing' (2026-10-12); $100,000 was the Dec-2025 community-guide figure, no longer officially verifiable."
+        },
+        {
+          "variant_name": "EmberNode",
+          "price_usd": 165,
+          "power_watts": null,
+          "notes": "Cabinet-based outdoor fiber gateway; Pakistan distribution layer. Tiered pricing: $165 (1-10 nodes), $150 (11-149), $145 (150-500). Earnings approx $0.0042/GB verified traffic, paid in USD/stablecoins. Source: worldmobile.io/airnodes (2026-10-12)."
+        },
+        {
+          "variant_name": "Frontier",
+          "price_usd": null,
+          "power_watts": null,
+          "notes": "New managed Wi-Fi AirNode for the Philippines rollout (Siargao); remote ownership, fixed monthly base reward. No public price (2026-10-12)."
+        },
+        {
+          "variant_name": "Pulse",
+          "price_usd": null,
+          "power_watts": null,
+          "notes": "'First energy infrastructure node' — Coming soon, not yet purchasable, no price (2026-10-12)."
         }
       ]
     },
