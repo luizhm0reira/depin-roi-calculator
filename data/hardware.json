@@ -418,7 +418,7 @@
           "variant_name": "Bee LTE (current flagship)",
           "price_usd": 589,
           "power_watts": null,
-          "notes": "Current model (2026). The $589 outright purchase option is NO LONGER listed on beemaps.com/bee as of 2026-10-12 — the page now shows Bee Membership ($19/mo x 24) only. (Caveat: the page's FAQ accordion is JS-driven and an outright mention buried there can't be fully ruled out.) Last verified outright price $589."
+          "notes": "Current model (2026). $589 outright purchases ARE still available in the GLOBAL store view (beemaps.com/bee?country=GLOBAL, 'Order Now' — ships without a data plan, BYO SIM; verified 2026-10-19). The default US view shows Bee Membership ($19/mo x 24) only. WiFi-only Bee ($449) discontinued and removed from the store."
         },
         {
           "variant_name": "Bee Membership (US)",
@@ -448,7 +448,7 @@
         "https://blockworks.com/news/hivemapper-raise-bee-dashcams",
         "https://cryptoadventure.com/hivemapper-review-2026-honey-bee-cameras-and-decentralized-map-data/"
       ],
-      "last_verified": "2026-10-12",
+      "last_verified": "2026-10-19",
       "data_quality": "solid",
       "affiliate_note": "Authorized reseller FreshMiners runs creator affiliate codes (e.g. 5% off code ILCAPOFOX seen on YouTube). Bee purchase promos (e.g. 4000 HONEY bonus after mapping 2000 km) tracked by DePIN Hub."
     },
@@ -466,9 +466,9 @@
         },
         {
           "variant_name": "H2 | Helium LoRaWAN (current)",
-          "price_usd": 239,
+          "price_usd": 189,
           "power_watts": null,
-          "notes": "Current official shop price $239 (verified ~Sep 23 2026). Solar-powered + AA batteries (~1.5 yr life), Helium LoRaWAN gateway needed. Successor of WS2000/WS2001; third-party stock of WS2000 still listed ~$400/€389 (Hexaspot, Helium Deploy)."
+          "notes": "SALE PRICE verified 2026-10-19 via live browser on weatherxm.com/shop: $189.00 with regular $239.00 struck through. Sale prices can end without notice — re-check before publishing."
         },
         {
           "variant_name": "Pulse | 4G/LTE (current)",
@@ -504,7 +504,7 @@
         "https://hexaspot.com/products/weatherxm-ws2000-helium-lorawan",
         "https://dapp.expert/analytics/weatherxm-wxm-how-the-depin-weather-network-and-data-economy-work-1787043783-884861"
       ],
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-19",
       "data_quality": "solid",
       "affiliate_note": "WeatherXM runs an official reseller/distributor program (listed on their shop page). Extra 10% off for purchases paid in $WXM."
     },
@@ -783,7 +783,7 @@
         "https://airnode.worldmobile.net/airnode-operate",
         "https://worldmobile.io/airnodes"
       ],
-      "last_verified": "2026-10-12",
+      "last_verified": "2026-10-19",
       "data_quality": "shaky",
       "affiliate_note": null,
       "variants": [
@@ -836,10 +836,28 @@
           "notes": "Cabinet-based outdoor fiber gateway; Pakistan distribution layer. Tiered pricing: $165 (1-10 nodes), $150 (11-149), $145 (150-500). Earnings approx $0.0042/GB verified traffic, paid in USD/stablecoins. Source: worldmobile.io/airnodes (2026-10-12)."
         },
         {
-          "variant_name": "Frontier",
-          "price_usd": null,
+          "variant_name": "Frontier Core",
+          "price_usd": 585,
           "power_watts": null,
-          "notes": "New managed Wi-Fi AirNode for the Philippines rollout (Siargao); remote ownership, fixed monthly base reward. No public price (2026-10-12)."
+          "notes": "Managed Wi-Fi AirNode for the Philippines rollout (Siargao); remote ownership, fixed monthly base reward. Tier 'Core'. Price published on worldmobile.io/airnodes + official blog (tiers announced 2026-09-21, updated 2026-10-14); volume pricing by tier. Verified 2026-10-19."
+        },
+        {
+          "variant_name": "Frontier Plus",
+          "price_usd": 750,
+          "power_watts": null,
+          "notes": "Managed Wi-Fi AirNode, Philippines rollout. Tier 'Plus'. Fixed monthly base reward. Verified 2026-10-19."
+        },
+        {
+          "variant_name": "Frontier Pro",
+          "price_usd": 1000,
+          "power_watts": null,
+          "notes": "Managed Wi-Fi AirNode, Philippines rollout. Tier 'Pro'. Fixed monthly base reward. Verified 2026-10-19."
+        },
+        {
+          "variant_name": "Frontier Max",
+          "price_usd": 1950,
+          "power_watts": null,
+          "notes": "Managed Wi-Fi AirNode, Philippines rollout. Tier 'Max'. Fixed monthly base reward. Verified 2026-10-19."
         },
         {
           "variant_name": "Pulse",
