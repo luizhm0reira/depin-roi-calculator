@@ -465,10 +465,22 @@
           "notes": "Current official shop price $199 (verified on weatherxm.com/shop crawl ~Sep 23 2026). WiFi connectivity; community reports it requires USB power (not fully solar-autonomous). Successor of the WB1200 WiFi bundle."
         },
         {
-          "variant_name": "H2 | Helium LoRaWAN (current)",
+          "variant_name": "D1 Open Edition | WiFi",
+          "price_usd": 299,
+          "power_watts": 5,
+          "notes": "Open Edition (open/TTN-style) variant of the D1, alongside the $199 Network Edition. Official shop, verified 2026-10-26."
+        },
+        {
+          "variant_name": "H2 | Helium LoRaWAN — Network Edition (current)",
           "price_usd": 189,
           "power_watts": null,
-          "notes": "SALE PRICE verified 2026-10-19 via live browser on weatherxm.com/shop: $189.00 with regular $239.00 struck through. Sale prices can end without notice — re-check before publishing."
+          "notes": "Network Edition $189 (verified 2026-10-26, live browser, weatherxm.com/shop). WeatherXM now frames the H2 as two editions: Network Edition $189 / Open Edition $239 (the $189 was briefly shown as a 'sale' price in Oct 2026 before the edition split)."
+        },
+        {
+          "variant_name": "H2 | Helium LoRaWAN — Open Edition",
+          "price_usd": 239,
+          "power_watts": 5,
+          "notes": "Open Edition variant of the H2 (Network Edition is $189). Official shop, verified 2026-10-26."
         },
         {
           "variant_name": "Pulse | 4G/LTE (current)",
@@ -493,6 +505,12 @@
           "price_usd": 70,
           "power_watts": null,
           "notes": "M5 gateway accessory from the weatherxm.com accessories shop (verified 2026-10-05)."
+        },
+        {
+          "variant_name": "D2 Mesh (Crowd Supply — not yet for sale)",
+          "price_usd": null,
+          "power_watts": null,
+          "notes": "NEW solar mesh station: WS1300 station + WG1200 console/gateway, Meshtastic/MeshCore capable. Live Crowd Supply campaign (sign-ups only) — not yet for sale, no price announced. Verified 2026-10-26."
         }
       ],
       "earnings_model": "Stations earn WXM daily based on data quality, cell density (max ~10 rewardable stations per hex), location stability and consistency. Daily reward is calculated by the reward mechanism and varies; keeping the station online in a non-saturated cell with high-quality data maximizes earnings.",
@@ -502,9 +520,10 @@
       "sources": [
         "https://weatherxm.com/shop/",
         "https://hexaspot.com/products/weatherxm-ws2000-helium-lorawan",
-        "https://dapp.expert/analytics/weatherxm-wxm-how-the-depin-weather-network-and-data-economy-work-1787043783-884861"
+        "https://dapp.expert/analytics/weatherxm-wxm-how-the-depin-weather-network-and-data-economy-work-1787043783-884861",
+        "https://www.crowdsupply.com/weatherxm/weatherxm-d2-mesh"
       ],
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "data_quality": "solid",
       "affiliate_note": "WeatherXM runs an official reseller/distributor program (listed on their shop page). Extra 10% off for purchases paid in $WXM."
     },
@@ -781,9 +800,10 @@
         "https://medium.com/@zekanemking/overview-of-the-world-mobile-sharing-c62651445e7e",
         "https://cryptobriefing.com/world-mobile-accelerates-u-s-network-growth-with-second-batch-of-airnode-sales/",
         "https://airnode.worldmobile.net/airnode-operate",
-        "https://worldmobile.io/airnodes"
+        "https://worldmobile.io/airnodes",
+        "https://airnode.worldmobile.net/reservations"
       ],
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "data_quality": "shaky",
       "affiliate_note": null,
       "variants": [
@@ -839,31 +859,55 @@
           "variant_name": "Frontier Core",
           "price_usd": 585,
           "power_watts": null,
-          "notes": "Managed Wi-Fi AirNode for the Philippines rollout (Siargao); remote ownership, fixed monthly base reward. Tier 'Core'. Price published on worldmobile.io/airnodes + official blog (tiers announced 2026-09-21, updated 2026-10-14); volume pricing by tier. Verified 2026-10-19."
+          "notes": "Managed Wi-Fi AirNode for the Philippines rollout (Siargao); remote ownership, fixed monthly base reward. Tier 'Core'. Price published on worldmobile.io/airnodes + official blog (tiers announced 2026-09-21, updated 2026-10-14); volume pricing by tier. Verified 2026-10-19. Operator comp (fixed base, official platform): $17.55/mo."
         },
         {
           "variant_name": "Frontier Plus",
           "price_usd": 750,
           "power_watts": null,
-          "notes": "Managed Wi-Fi AirNode, Philippines rollout. Tier 'Plus'. Fixed monthly base reward. Verified 2026-10-19."
+          "notes": "Managed Wi-Fi AirNode, Philippines rollout. Tier 'Plus'. Fixed monthly base reward. Verified 2026-10-19. Operator comp (fixed base, official platform): $22.50/mo."
         },
         {
           "variant_name": "Frontier Pro",
           "price_usd": 1000,
           "power_watts": null,
-          "notes": "Managed Wi-Fi AirNode, Philippines rollout. Tier 'Pro'. Fixed monthly base reward. Verified 2026-10-19."
+          "notes": "Managed Wi-Fi AirNode, Philippines rollout. Tier 'Pro'. Fixed monthly base reward. Verified 2026-10-19. Operator comp (fixed base, official platform): $30.00/mo."
         },
         {
           "variant_name": "Frontier Max",
           "price_usd": 1950,
           "power_watts": null,
-          "notes": "Managed Wi-Fi AirNode, Philippines rollout. Tier 'Max'. Fixed monthly base reward. Verified 2026-10-19."
+          "notes": "Managed Wi-Fi AirNode, Philippines rollout. Tier 'Max'. Fixed monthly base reward. Verified 2026-10-19. Operator comp (fixed base, official platform): $58.50/mo."
         },
         {
           "variant_name": "Pulse",
           "price_usd": null,
           "power_watts": null,
           "notes": "'First energy infrastructure node' — Coming soon, not yet purchasable, no price (2026-10-12)."
+        },
+        {
+          "variant_name": "Frontier Advance Stack",
+          "price_usd": 2299,
+          "power_watts": null,
+          "notes": "Bundle: 2x Frontier Plus + 1x Frontier Pro. SOLD OUT on the official reservations platform; deliveries Nov-Dec 2026. Operator comp $75.00/mo. Verified 2026-10-26."
+        },
+        {
+          "variant_name": "Frontier Prime Stack",
+          "price_usd": 2399,
+          "power_watts": null,
+          "notes": "Bundle: 1x Frontier Core + 2x Frontier Pro. SOLD OUT on the official reservations platform; deliveries Nov-Dec 2026. Operator comp $77.55/mo. Verified 2026-10-26."
+        },
+        {
+          "variant_name": "Frontier Select Stack",
+          "price_usd": 2149,
+          "power_watts": null,
+          "notes": "Bundle: 1x Frontier Core + 1x Frontier Plus + 1x Frontier Pro. SOLD OUT on the official reservations platform; deliveries Nov-Dec 2026. Operator comp $70.05/mo. Verified 2026-10-26."
+        },
+        {
+          "variant_name": "Edge Extender Bundle (4x Spark + 1x EmberNode)",
+          "price_usd": 416.96,
+          "power_watts": null,
+          "notes": "AirNode Drops bundle (Pakistan): 4x Spark + 1x EmberNode. Live drop 30 Sep - 31 Oct 2026 (volume tiers $361.96 / $344.95). Currently the ONLY way to get a Spark (bundle-only). Verified 2026-10-26."
         }
       ]
     },
