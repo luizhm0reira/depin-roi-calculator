@@ -374,7 +374,7 @@
           "variant_name": "Sixents G20 Multi-band GNSS Base Station (purpose-built for onocoy)",
           "price_usd": 649,
           "power_watts": 3.5,
-          "notes": "Purpose-built for onocoy by Sixents Technology, announced June/July 2026. 1,040 tracking channels; GPS/GLONASS/BeiDou/Galileo/QZSS/NavIC, 4-band; built-in NTRIP server = zero-configuration onocoy onboarding; Wi-Fi/Ethernet/LoRa, optional 4G; max 3.5 W. Full bundle incl. receiver, GNSS antenna, cables, PSU, mounting kit. Pre-launch promo $549 (June 2026); order via qdnavi.com."
+          "notes": "Price VERIFIED 2026-11-09 at qdnavi.com/product/g20 (Add to Cart live). Caveat: the QD Navi page carries no Onocoy/Sixents branding (described as an auto-steering system) and does not label the currency — but the price matches. Jun/Jul 2026 press cited a $549 launch promo."
         },
         {
           "variant_name": "ArduSimple RTK Smart Antenna (u-blox ZED-F9P-class route)",
@@ -402,9 +402,10 @@
       "sources": [
         "https://onocoy.com/blog/why-a-gnss-hardware-manufacturer-built-a-custom-station-for-onocoy",
         "https://www.ardusimple.com/tutorials/how-to-get-paid-for-installing-and-sharing-your-base-station-with-onocoy/",
-        "https://www.hackster.io/simeononsecurity/diy-onocoy-ntrip-server-and-reference-station-setup-d5904f"
+        "https://www.hackster.io/simeononsecurity/diy-onocoy-ntrip-server-and-reference-station-setup-d5904f",
+        "https://www.qdnavi.com/product/g20/"
       ],
-      "last_verified": "2026-10-12",
+      "last_verified": "2026-11-09",
       "data_quality": "sparse",
       "affiliate_note": null
     },
@@ -489,6 +490,12 @@
           "notes": "'From $610' on official shop (~Sep 23 2026); earlier list $900/$810 sale. Solar-powered, 4G/LTE connectivity for off-grid locations. Successor of the WB3000 bundle (WS1001 + Pulse 4G gateway, $900)."
         },
         {
+          "variant_name": "Pulse Open Edition",
+          "price_usd": 810,
+          "power_watts": 10,
+          "notes": "Open Edition of the Pulse (Network Edition is $610) — same edition split as the D1 and H2. Product page, verified 2026-11-09."
+        },
+        {
           "variant_name": "WS1000 (replacement part / legacy)",
           "price_usd": 70,
           "power_watts": null,
@@ -529,7 +536,7 @@
         "https://dapp.expert/analytics/weatherxm-wxm-how-the-depin-weather-network-and-data-economy-work-1787043783-884861",
         "https://www.crowdsupply.com/weatherxm/weatherxm-d2-mesh"
       ],
-      "last_verified": "2026-11-02",
+      "last_verified": "2026-11-09",
       "data_quality": "solid",
       "affiliate_note": "WeatherXM runs an official reseller/distributor program (listed on their shop page). Extra 10% off for purchases paid in $WXM."
     },
@@ -549,7 +556,7 @@
           "variant_name": "DIMO LTE S1 (Americas)",
           "price_usd": 99.99,
           "power_watts": 1,
-          "notes": "Americas version, in stock (verified 2026-10-12). Coexists with the LTE R1 listings. OBD2 vehicle device."
+          "notes": "Americas version, in stock (verified 2026-10-12). Coexists with the LTE R1 listings. OBD2 vehicle device. NOTE (2026-11-09): no separate S1 listing found on drivedimo.com — the store lists only the LTE R1. Possibly merged into the R1 listing; flagged, not confirmed discontinued."
         },
         {
           "variant_name": "DIMO AutoPi (discontinued)",
@@ -582,7 +589,7 @@
         "https://drivedimo.com/products/dimo-lte-r1",
         "https://medium.com/@imrankhan.digital/what-makes-dimo-lte-r1-dimo-autopi-and-dimo-macaron-different-85da9613b38e"
       ],
-      "last_verified": "2026-10-12",
+      "last_verified": "2026-11-09",
       "data_quality": "shaky",
       "affiliate_note": "No official DIMO affiliate program found — Buy button links the official DIMO store (non-affiliate)."
     },
@@ -807,9 +814,10 @@
         "https://cryptobriefing.com/world-mobile-accelerates-u-s-network-growth-with-second-batch-of-airnode-sales/",
         "https://airnode.worldmobile.net/airnode-operate",
         "https://worldmobile.io/airnodes",
-        "https://airnode.worldmobile.net/reservations"
+        "https://airnode.worldmobile.net/reservations",
+        "https://airnode.worldmobile.net/reservations/bundles"
       ],
-      "last_verified": "2026-11-02",
+      "last_verified": "2026-11-09",
       "data_quality": "shaky",
       "affiliate_note": null,
       "variants": [
@@ -853,7 +861,7 @@
           "variant_name": "EmberNode Portal (formerly Titan)",
           "price_usd": 1000,
           "power_watts": null,
-          "notes": "Rebranded from Titan: now listed as 'EmberNode Portal' from $1,000/unit on the official reservations platform (5G CBRS, delivery Nov 2026 - Mar 2027). Price from the reservations listing card, verified 2026-11-02; detail page not opened. Earlier Dec-2025 guide cited ~$100,000 for the Titan hardware."
+          "notes": "Rebranded from Titan and listed from $1,000/unit on the official reservations platform on 2026-11-02 — but NO LONGER LISTED one week later (checked 2026-11-09: absent from the reservations list and product pages). Kept here for reference; price was the brief listed price."
         },
         {
           "variant_name": "EmberNode",
@@ -910,10 +918,28 @@
           "notes": "Bundle: 1x Frontier Core + 1x Frontier Plus + 1x Frontier Pro. NO LONGER LISTED: sold out on the official reservations platform in Oct 2026, then removed from the platform entirely (verified 2026-11-02). Kept here for reference; price was the last listed price. Operator comp $70.05/mo. Verified 2026-10-26."
         },
         {
-          "variant_name": "Edge Extender Bundle (4x Spark + 1x EmberNode)",
-          "price_usd": 416.96,
+          "variant_name": "Edge Extender (4x Spark + 1x EmberNode)",
+          "price_usd": 424.99,
           "power_watts": null,
-          "notes": "AirNode Drops bundle (Pakistan): 4x Spark + 1x EmberNode. Drop ran 30 Sep - 31 Oct 2026 and has ENDED (drops page now shows 'No Drops Available', verified 2026-11-02) — kept here for reference; price was the drop price. Volume tiers were $361.96 / $344.95. It was the only way to get a Spark (bundle-only)."
+          "notes": "Permanent bundle on the official reservations/bundles page (was a limited AirNode Drop at $416.96, Sep-Oct 2026). Verified 2026-11-09. One of the only ways to buy Spark units."
+        },
+        {
+          "variant_name": "Edge Starter (1x Spark + 1x EmberNode)",
+          "price_usd": 229,
+          "power_watts": null,
+          "notes": "Bundle on the official reservations/bundles page; limit 1 per customer. Verified 2026-11-09."
+        },
+        {
+          "variant_name": "Edge Extender Advance (6x Spark + 2x EmberNode)",
+          "price_usd": 699,
+          "power_watts": null,
+          "notes": "Bundle on the official reservations/bundles page. Verified 2026-11-09."
+        },
+        {
+          "variant_name": "Edge Extender Prime (8x Spark + 3x EmberNode)",
+          "price_usd": 965,
+          "power_watts": null,
+          "notes": "Bundle on the official reservations/bundles page. Verified 2026-11-09."
         }
       ]
     },
