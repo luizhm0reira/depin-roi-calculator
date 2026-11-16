@@ -75,9 +75,9 @@
       "variants": [
         {
           "variant_name": "US915 / EU868 (SX1302)",
-          "price_usd": 99,
+          "price_usd": 98,
           "power_watts": null,
-          "notes": "IMPORTANT: the currently sold 'M2 Multi-Platform' gateway explicitly does NOT support the Helium network (cannot connect to SenseCAP Hotspot App/Dashboard) per seeedstudio.com. An older SenseCAP MX-series 'M2 Data Only' did support Helium but is not the current product."
+          "notes": "IMPORTANT: the currently sold 'M2 Multi-Platform' gateway explicitly does NOT support the Helium network (cannot connect to SenseCAP Hotspot App/Dashboard) per seeedstudio.com. An older SenseCAP MX-series 'M2 Data Only' did support Helium but is not the current product. Price $98 verified 2026-11-16 on the official Seeed product page (was $99)."
         }
       ],
       "earnings_model": "Not applicable — not Helium-compatible, earns nothing on Helium.",
@@ -88,7 +88,7 @@
         "https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html",
         "https://wiki.seeedstudio.com/SenseCAP-M2-Data-Only-FAQ/"
       ],
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-11-16",
       "data_quality": "solid",
       "affiliate_note": "Seeed Studio affiliate approved 2026-10-05 (code zDAXnT9)."
     },
@@ -556,7 +556,7 @@
           "variant_name": "DIMO LTE S1 (Americas)",
           "price_usd": 99.99,
           "power_watts": 1,
-          "notes": "Americas version, in stock (verified 2026-10-12). Coexists with the LTE R1 listings. OBD2 vehicle device. NOTE (2026-11-09): no separate S1 listing found on drivedimo.com — the store lists only the LTE R1. Possibly merged into the R1 listing; flagged, not confirmed discontinued."
+          "notes": "Americas version, in stock (verified 2026-10-12). Coexists with the LTE R1 listings. OBD2 vehicle device. Separate S1 listing confirmed live at $99.99 (2026-11-16) — a 2026-11-09 check that missed it was a false alarm."
         },
         {
           "variant_name": "DIMO AutoPi (discontinued)",
@@ -589,7 +589,7 @@
         "https://drivedimo.com/products/dimo-lte-r1",
         "https://medium.com/@imrankhan.digital/what-makes-dimo-lte-r1-dimo-autopi-and-dimo-macaron-different-85da9613b38e"
       ],
-      "last_verified": "2026-11-09",
+      "last_verified": "2026-11-16",
       "data_quality": "shaky",
       "affiliate_note": "No official DIMO affiliate program found — Buy button links the official DIMO store (non-affiliate)."
     },
@@ -956,7 +956,7 @@
         "https://www.natix.network/vx360-depin-dashcam",
         "https://chainwire.org/2024/11/26/natix-launches-vx360-unlocking-360-tesla-dashcam-footage-for-mapping-and-autonomous-driving/"
       ],
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-11-16",
       "data_quality": "solid",
       "affiliate_note": null,
       "variants": [
@@ -965,6 +965,18 @@
           "price_usd": 379,
           "power_watts": null,
           "notes": "Price $379 verified on the official buy widget 2026-10-05 (\"VX360 Ultimate Set — includes Firmware + Hardware\", in stock, ships in 5-10 days; 10% cashback for USDC/Solana Pay). TESLA ONLY — Model S/X (2021+), Model 3, Model Y, Cybertruck. Car USB powered (glovebox). 256 GB storage, ~20h+ video from 4 Tesla cameras, L1 GNSS, Wi-Fi + BLE. Ships to USA (excl. Alaska), Canada, EU, UK, Norway, Switzerland, Singapore, Japan."
+        },
+        {
+          "variant_name": "VX360 Drive Unit (only)",
+          "price_usd": 60,
+          "power_watts": null,
+          "notes": "Drive Unit sold separately on shop.natix.network (hardware only — needs the Companion App License to earn). Verified 2026-11-16."
+        },
+        {
+          "variant_name": "VX360 Companion App License (only)",
+          "price_usd": 319,
+          "power_watts": null,
+          "notes": "App license sold separately on shop.natix.network (software only — needs the Drive Unit). Drive Unit $60 + License $319 = the $379 Ultimate Set. Verified 2026-11-16."
         }
       ]
     }
