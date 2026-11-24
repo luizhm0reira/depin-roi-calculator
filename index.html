@@ -14,8 +14,17 @@
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--text);
     font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
-  .wrap{max-width:1080px;margin:0 auto;padding:20px 16px 80px}
+  .wrap{max-width:1440px;margin:0 auto;padding:20px 16px 80px}
   header{margin:8px 0 20px}
+  .layout{display:grid;grid-template-columns:minmax(0,1fr) 540px;gap:20px;align-items:start}
+  .col-right{position:sticky;top:16px}
+  .col-right .panel{margin-top:0;max-height:calc(100vh - 32px);overflow-y:auto}
+  .placeholder{border:1px dashed var(--line);border-radius:14px;padding:28px 20px;color:var(--muted);text-align:center}
+  @media(max-width:1023px){
+    .layout{grid-template-columns:1fr}
+    .col-right{position:static}
+    .col-right .panel{max-height:none;overflow:visible}
+  }
   h1{margin:0 0 6px;font-size:28px}
   h1 .accent{color:var(--accent)}
   .sub{color:var(--muted);margin:0;max-width:720px}
@@ -85,6 +94,8 @@
   <p class="sub">Honest payback math for DePIN hardware. Pick the <strong>exact hardware variant</strong> — a $150 miner and a $2,500 miner on the same network are not the same investment.</p>
 </header>
 
+<div class="layout">
+<div class="col-left">
 <section>
   <label>Network</label>
   <div class="chips" id="networks"></div>
@@ -94,8 +105,12 @@
   <label>Hardware</label>
   <div class="grid products" id="products"></div>
 </section>
+</div>
 
-<section id="detail" class="hidden"></section>
+<div class="col-right">
+<section id="detail"></section>
+</div>
+</div>
 
 <footer>
   <p><strong>Disclaimer:</strong> All figures are estimates for illustration only — not financial advice.
@@ -130,7 +145,7 @@ function renderNetworks(){
   $('networks').innerHTML = networks().map(n=>
     `<button class="chip${n===state.network?' active':''}" data-n="${n}">${n}</button>`).join('');
   document.querySelectorAll('#networks .chip').forEach(c=>c.onclick=()=>{
-    state.network=c.dataset.n; state.productId=null; renderNetworks(); renderProducts(); $('detail').classList.add('hidden');
+    state.network=c.dataset.n; state.productId=null; renderNetworks(); renderProducts(); showPlaceholder();
   });
 }
 
@@ -157,6 +172,11 @@ function selectProduct(id){
   document.querySelectorAll('#products .card').forEach(c=>c.classList.toggle('sel',c.dataset.id===id));
   renderDetail();
   fetchPrice();
+  if(window.innerWidth<1024) $('detail').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function showPlaceholder(){
+  $('detail').innerHTML=`<div class="placeholder">👈 Pick a hardware product on the left<br>to run its payback math here.</div>`;
 }
 function product(){ return DATA.products.find(p=>p.id===state.productId); }
 
@@ -252,7 +272,6 @@ function renderDetail(){
     </details>
     ${p.affiliate_url?`<a class="buybtn" href="${p.affiliate_url}" target="_blank" rel="noopener sponsored">Buy ${esc(p.name)} →</a>`:''}
   </div>`;
-  $('detail').classList.remove('hidden');
   renderVariants(); renderDetailInputs(); updateOutputs();
 }
 
@@ -379,7 +398,7 @@ function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;'
 // expose pure functions for node-based tests
 if(typeof module!=='undefined'&&module.exports){ module.exports={computeROI,paybackLabel,elecPerMonth,selectProduct,product,state,DATA,renderProducts,renderNetworks,updateOutputs,renderDetailInputs}; }
 
-renderNetworks(); renderProducts();
+renderNetworks(); renderProducts(); showPlaceholder();
 </script>
 </body>
 </html>
